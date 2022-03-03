@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 
 namespace FirstHomework_INCI_KILIC.Models
 {
+
+    //Response classında sunucudan dönen cevaplaa ilişkin özellikler bulunmaktadır
     public class ResponseViewModel
     {
         public bool Success { get; set; }

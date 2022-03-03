@@ -1,11 +1,11 @@
 ﻿@model UserViewModel
-@*@{
-        ViewData["Title"] = "LoginForm";
-    }*@
+
+@*Bir form alanı oluşturuluyor. Post metodu kullanılıyor. 
+En aşağıda submit butonu bulunuyor.
+Error, success, data dönüşleri kullanıcıya gösteriliyor.*@
 
 <form id="myForm" method="post" class="container">
-    @*@Html.ValidationSummary()*@
-
+   
     <div class="form-group">
         <label asp-for="FirstName" class="control-label"></label>
         <input asp-for="FirstName" class="form-control-range" />

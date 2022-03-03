@@ -18,6 +18,8 @@ namespace FirstHomework_INCI_KILIC.Controllers
             _logger = logger;
         }
 
+        //LoginForm'a ait action tanımlanıyor.
+        //Yine aynı isimle Views/Home altında LoginForm.cshtml bulunmaktadır.
         public IActionResult LoginForm()
         {
             //return View();
@@ -30,7 +32,12 @@ namespace FirstHomework_INCI_KILIC.Controllers
         }
 
 
-        //API, method post
+        //API, method post, sunucuya veri gönderimi için kullanıyoruz.
+        //Parametre olarak UserViewModel'den bir model alıyoruz.
+        //İşlemlerimizin başarı durumlarına ait dönüşler yapılıyor.
+        //İşlem başarılı ise Data = "Giriş işlemi başarılı", Success = true,  Error = "Null"
+        //İşlem başarılı değil ise Data = "Null", Success = false,  Error = "Hatalı giriş"
+
         [HttpPost]
         public IActionResult LoginForm(UserViewModel model)
         {
@@ -41,9 +48,7 @@ namespace FirstHomework_INCI_KILIC.Controllers
                 Error = "Null"
 
             };
-            if (!ModelState.IsValid)
-
-            
+            if (!ModelState.IsValid) //null değerler olması durumunda hata verecek 
             {
                 var user2 = new ResponseViewModel
                 {
